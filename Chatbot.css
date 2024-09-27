@@ -1,0 +1,300 @@
+/* General reset and full-page flex layout */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  color: white;
+  align-items: center;
+  background-color: #000000;
+  overflow: hidden;
+  position: relative;
+  height: 100vh;
+  padding: 0 20px; /* Added padding for small devices */
+}
+
+/* Bot name styling */
+.bot-name {
+  font-size: 48px; /* Equivalent to 3em */
+  height: 60px;
+  width: 100%; 
+  text-align: center;
+  font-weight: bold;
+  padding: 12px 0;
+}
+
+/* New Inquiry button */
+.new-inquiry {
+  position: absolute;
+  height: 60px; /* Default height */
+  width: 60px;  /* Default width */
+  color: white;
+  top: 10px;    /* Default top position */
+  left: 10px;   /* Default left position */
+  cursor: pointer;
+}
+
+/* Responsive styles for small devices */
+@media (max-width: 600px) {
+  .new-inquiry {
+    height: 50px; /* Adjusted height for small devices */
+    width: 50px;  /* Adjusted width for small devices */
+    top: 8px;     /* Adjusted top position */
+    left: 8px;    /* Adjusted left position */
+  }
+}
+
+.chat {
+  position: relative;
+  left: 40px;   /* Default left position */
+  top: -45px;   /* Default top position */
+  font-size: 12px; /* Default font size */
+  width: 250px; /* Default width */
+  color: black;
+}
+
+/* Responsive styles for small devices */
+@media (max-width: 600px) {
+  .chat {
+    left: 30px;  /* Adjusted left position */
+    top: -30px;  /* Adjusted top position */
+    font-size: 11px; /* Adjusted font size for small devices */
+    width: 200px; /* Adjusted width for small devices */
+  }
+}
+
+.share-chat-label {
+  height: 40px; /* Default height */
+  width: 40px;  /* Default width */
+}
+
+/* Responsive styles for small devices */
+@media (max-width: 600px) {
+  .share-chat-label {
+    height: 35px; /* Adjusted height for small devices */
+    width: 35px;  /* Adjusted width for small devices */
+  }
+}
+
+.upload-icon {
+  height: 30px; /* Default height */
+  width: 30px;  /* Default width */
+}
+
+/* Responsive styles for small devices */
+@media (max-width: 600px) {
+  .upload-icon {
+    height: 25px; /* Adjusted height for small devices */
+    width: 25px;  /* Adjusted width for small devices */
+  }
+}
+
+.profile-dropdown {
+  position: fixed;
+  right: 20px; /* Default right position */
+  top: 10px;   /* Default top position */
+  cursor: pointer;
+}
+
+/* Responsive styles for small devices */
+@media (max-width: 600px) {
+  .profile-dropdown {
+    right: 15px; /* Adjusted right position for small devices */
+    top: 8px;    /* Adjusted top position for small devices */
+  }
+}
+
+/* Further adjustments for very small devices */
+@media (max-width: 400px) {
+  .new-inquiry {
+    height: 40px; /* Further adjusted height */
+    width: 40px;  /* Further adjusted width */
+    top: 5px;     /* Further adjusted top position */
+    left: 5px;
+    font-size: 4px;   /* Further adjusted left position */
+  }
+
+  .chat {
+    left: 80px;  /* Further adjusted left position */
+    top: -20px;  /* Further adjusted top position */
+    font-size: 5px; /* Further adjusted font size */
+    width: 180px; /* Further adjusted width */
+  }
+  
+  .share-chat-label {
+    height: 30px; /* Further adjusted height */
+    width: 30px;  /* Further adjusted width */
+    font-size: 5px;
+    left: 80px;
+  }
+
+  .upload-icon {
+    height: 20px; /* Further adjusted height */
+    width: 20px;  /* Further adjusted width */
+    font-size: 5px;
+    left: 80px;
+  }
+  
+  .profile-dropdown {
+    right: 10px; /* Further adjusted right position */
+    top: 5px;    /* Further adjusted top position */
+    left: 80px;
+    font-size: 5px;
+  }
+}
+
+
+/* Send Button */
+#sendButton {
+  background-color: hsl(210, 3%, 31%);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  left: 10px;
+  width: 80px; 
+  height: 35px;
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+.chat-box {
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 200px); 
+  width: 100%; 
+  position: relative;
+  z-index: 1;
+  padding: 10px;
+  max-height: 100%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  white-space: pre-wrap;
+  font-size: 14px;
+  line-height: 1.4;
+  flex-grow: 1;
+  color: rgb(255, 255, 255);
+  background-color: #302f2f;
+  border-radius: 10px;
+}
+
+.chat-message, .bot-message, .user-message {
+  padding: 10px;
+  border-radius: 15px;
+  max-width: 80%; 
+  margin-bottom: 8px;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  text-align: left;
+  font-family: 'Bruno Ace', sans-serif;
+  position: relative;
+}
+
+.bot-message {
+  background-color: hsl(210, 3%, 31%);
+  align-self: flex-start;
+}
+
+.user-message {
+  background-color: hsl(210, 3%, 31%);
+  align-self: flex-end;
+  color: #fff;
+}
+
+.chat-container {
+  display: flex;
+  margin-top: 20px;
+  color: black;
+  width: 100%;
+  max-width: 896px;
+  padding: 10px;
+  flex-direction: column;
+  height: calc(100vh - 120px); 
+}
+
+.input-area {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #302f2f;
+  border-radius: 10px;
+}
+
+::placeholder {
+  color: white;
+}
+
+.input {
+  width: calc(100% - 110px); /* Adjusted width for send button */
+  height: 35px;
+  border-radius: 20px;
+  text-align: center;
+  background-color: hsl(210, 3%, 31%);
+  color: white;
+  border: none;
+  padding: 0 10px;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .bot-name {
+    font-size: 32px;
+    padding: 10px 0;
+  }
+
+  .new-inquiry {
+    height: 50px;
+    width: 50px;
+    top: 5px;
+    left: 5px;
+  }
+
+  .profile-dropdown {
+    right: 10px;
+    top: 5px;
+  }
+
+  .chat-container {
+    width: 100%;
+    margin-top: 10px;
+    padding: 0 5px;
+  }
+
+  .input {
+    width: calc(100% - 90px);
+    height: 30px;
+  }
+
+  #sendButton {
+    padding: 4px 8px;
+    height: 30px;
+    width: 60px;
+  }
+
+  .chat-box {
+    padding: 5px;
+    font-size: 12px;
+    height: calc(100vh - 200px); 
+  }
+
+  .chat-message,
+  .bot-message,
+  .user-message {
+    padding: 8px;
+    max-width: 100%;
+    font-size: 12px;
+  }
+}
+
+
+  
+

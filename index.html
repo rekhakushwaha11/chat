@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CIA Chatbot</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Chatbot.css">
+  <link rel="stylesheet" href="style.css">
+ 
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</head>
+<body style="background-color: hsl(0, 2%, 18%);">
+
+  <!-- Main chatbot container -->
+  <div class="chat-container" > 
+    <!-- NAVBAR CREATION -->
+    <div class="collapse" id="navbarToggleExternalContent" style="color: white;">
+  <div >
+   <nav class="navbar">
+      <!-- home -->
+        <a data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Home</a>
+
+<div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel"style="background-color: black;color: white;" >
+  <div class="offcanvas-header"style="background-color: black;color: white;" >
+    <h5 class="offcanvas-title" id="offcanvasScrollingLabel"><h1>Welcome to CIA!</h1></h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <h5>Your Personal Assistant for Educational Information</h5>
+    <p>Whether you're a student, teacher, or lifelong learner, EduBot is here to help you navigate through all your education-related needs. From finding the best courses, tracking academic records, getting exam tips, or exploring career guidance, we've got you covered.</p>
+  </div>
+</div>
+<!-- Features -->
+       <a data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">Features</a>
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel"style="background-color: black;color: white;" >
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Features</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <h4>Course Recommendations</h4>
+    <p>Suggests relevant courses, certifications, and programs based on the user’s interests, goals, and current educational level.</p>
+    <h4>Institution Information</h4>
+    <p>Provides detailed information about schools, colleges, universities, and online learning platforms, including admission requirements, programs offered, and fees.</p>
+    <div>
+      <h4>Admission Assistance</h4>
+      <p>Helps users navigate the admission process by guiding them through important steps like application deadlines, document submission, and interview preparation.
+</p>
+    </div>
+    <div class="dropdown mt-3">
+      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+       More Features
+      </button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">About colleges</a></li>
+        <li><a class="dropdown-item" href="#">Cutoff</a></li>
+        <li><a class="dropdown-item" href="#">Other</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- About us -->
+         <a data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">About us</a>
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel"style="background-color: black;color: white;" >
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasRightLabel">About us</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div>
+      <p>CIA is your personal learning companion, designed to make navigating the world of education easier and more accessible. Whether you're a student searching for the right course, a parent seeking guidance on school admissions, or a professional looking to upskill, EduBot is here to assist you every step of the way.
+
+Our mission is to provide learners, educators, and professionals with timely, accurate, and personalized educational information. We believe that everyone should have access to the best learning opportunities, no matter where they are.</p>
+    </div>
+    <div class="dropdown mt-3">
+      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+       More
+      </button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Support</a></li>
+        <li><a class="dropdown-item" href="#">Help</a></li>
+        <li><a class="dropdown-item" href="#">Feedback</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Contact us -->
+       <a data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Account</a>
+
+<div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel"style="background-color: black;color: white;" >
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasBottomLabel">Connect with us</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div>
+     <!-- login page -->
+         <a href="login.html" type="button" class="btn" style="position: relative;top: -17px;left: 390px;background-color: black;color: white;">Login</a>
+<!-- sign up page -->
+         <a href="signup.html"type="button" class="btn" style="position: relative;top: -17px;left: 200px;background-color: black;color: white;">Sign up</a>
+    </div>
+    
+  </div>
+</div>
+</nav>
+  </div>
+</div>
+<!-- hamburger -->
+<div class="hamburger navbar navbar-dark">
+    <button  class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+</div>
+<!-- bot-name -->
+      <h1 class="bot-name"style="color:white;">C.I.A. Chatbot</h1>
+      <!-- New Inquiry -->
+      <span id="newInquiry" class="new-inquiry">New Inquiry</span> 
+      <!-- shareChat -->
+          <div class="profile-dropdown">
+        <div id="shareChat" class="share-chat"style="color:white;">
+          <img src="images/icons8-upload-50.png" alt="Share Chat" class="upload-icon"style="background-color:white;color:white;">
+          <div class="share-chat-label"style="">Share <br> Chat</div>
+        </div>
+        <!-- Chat-History -->
+         <p class="chat">
+  <button class=" btn text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+    Chat history
+  </button>
+</p>
+<div >
+  <div class="collapse collapse-vertical" id="collapseWidthExample">
+    <div class="chat card card-body bg-dark text-light" >
+     Your Chat Will be appear here!
+    </div>
+  </div>
+</div>
+      </div>
+   <!-- Chatbox -->
+    <div class="chat-box" id="chatBox">
+      <div class="chat-message bot-message">Hello! How can I assist you today with college information?</div>
+    </div>
+
+    <div class="input-area">
+      <input class="input" type="text" id="userInput" placeholder="Type your message here..." autocomplete="off"style="">
+      <button id="sendButton"style="">Send</button>
+    </div>
+    
+  </div>
+ 
+  <script src="Chatbot.js"></script>
+</body>
+</html>
