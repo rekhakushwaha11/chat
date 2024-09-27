@@ -120,7 +120,7 @@ body {
   }
 
   .chat {
-    left: 80px;  /* Further adjusted left position */
+    left: -80px;  /* Further adjusted left position */
     top: -20px;  /* Further adjusted top position */
     font-size: 5px; /* Further adjusted font size */
     width: 180px; /* Further adjusted width */
@@ -130,20 +130,20 @@ body {
     height: 30px; /* Further adjusted height */
     width: 30px;  /* Further adjusted width */
     font-size: 5px;
-    left: 80px;
+    left: -80px;
   }
 
   .upload-icon {
     height: 20px; /* Further adjusted height */
     width: 20px;  /* Further adjusted width */
     font-size: 5px;
-    left: 80px;
+    left: -80px;
   }
   
   .profile-dropdown {
     right: 10px; /* Further adjusted right position */
     top: 5px;    /* Further adjusted top position */
-    left: 80px;
+    left: -80px;
     font-size: 5px;
   }
 }
